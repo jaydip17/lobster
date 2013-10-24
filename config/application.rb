@@ -69,7 +69,7 @@ end
 # config/initializers/production.rb
 class << Rails.application
   def domain
-    "lobste.rs"
+    "localhost:3000"
   end
 
   def name
