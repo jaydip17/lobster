@@ -37,3 +37,6 @@ group :test, :development do
   gem "machinist"
   gem "sqlite3"
 end
+
+
+gem 'hirb'
