@@ -6,15 +6,17 @@
   </ol>
 <% end %>
 
-<div class="morelink">
-  <% if @page && @page > 1 %>
-    <a href="/comments<%= @page == 2 ? "" : "/page/#{@page - 1}" %>">&lt;&lt; 
-      Page <%= @page - 1 %></a>
-  <% end %>
 
-  <% if @page && @page > 1 %>
-    |
-  <% end %>
+<% next_page_button do %>
+  <div class="morelink">
+    <% if @page && @page > 1 %>
+      <a href="/comments<%= @page == 2 ? "" : "/page/#{@page - 1}" %>">&lt;&lt; 
+        Page <%= @page - 1 %></a>
+    <% end %>
 
-  <a href="/comments/page/<%= @page + 1 %>">Page <%= @page + 1 %> &gt;&gt;</a>
-</div>
+    <% if @page && @page > 1 %>
+      |
+    <% end %>
+    <a href="/comments/page/<%= @page + 1 %>">Page <%= @page + 1 %> &gt;&gt;</a>
+  </div>
+<% end %>

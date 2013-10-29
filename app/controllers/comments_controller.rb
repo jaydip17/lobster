@@ -216,6 +216,8 @@ class CommentsController < ApplicationController
         end
       end
     end
+
+    @comment_limit = COMMENTS_PER_PAGE
   end
 
   def threads

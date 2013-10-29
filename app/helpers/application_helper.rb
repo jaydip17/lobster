@@ -16,4 +16,7 @@ module ApplicationHelper
     label_tag(nil, time_ago_in_words(*args),
       :title => args.first.strftime("%F %T %z"))
   end
+
+
+  
 end
