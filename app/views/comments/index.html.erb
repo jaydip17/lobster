@@ -7,7 +7,7 @@
 <% end %>
 
 
-<% next_page_button do %>
+<%= next_page_button do %>
   <div class="morelink">
     <% if @page && @page > 1 %>
       <a href="/comments<%= @page == 2 ? "" : "/page/#{@page - 1}" %>">&lt;&lt; 
