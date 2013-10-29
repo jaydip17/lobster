@@ -21,7 +21,7 @@ class MessagesController < ApplicationController
     @title = "Messages Sent"
 
     @direction = :out
-    @messages = @user.undeleted_sent_messages
+    @messages = Message.where(author_user_id: @user.id)
 
     @new_message = Message.new
 
